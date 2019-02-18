@@ -1,0 +1,183 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#formatContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 130px;
+  height: 200px;
+  z-index: 999999999999;
+}
+
+#formatContainer.hidden {
+  display: none;
+}
+
+.format-text {
+  position: absolute;
+  left: -160px;
+  top: 10px;
+  text-transform: uppercase;
+  width: 140px;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  background: red;
+  color: wheat;
+  display: none;
+}
+
+#formatContainer img {
+  height: 100%;
+  -webkit-animation: animateGlow 0.1s linear infinite;
+  -moz-animation: animateGlow 0.1s linear infinite;
+  animation: animateGlow 0.1s linear infinite;
+}
+
+.format-animation-show {
+  display: block;
+  right: -150px;
+  animation-name: animateHorse1;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes animateHorse1 {
+  0% {
+    right: -150px;
+    bottom: 0px;
+  }
+
+  15% {
+    right: -150px;
+    bottom: 0px;
+  }
+
+  50% {
+    right: 0;
+    bottom: 0px;
+  }
+
+  70% {
+    right: 0;
+    bottom: 0px;
+  }
+
+  100% {
+    right: -150px;
+    bottom: 0px;
+  }
+
+}
+
+@keyframes animateGlow {
+  0% {
+    -webkit-filter: drop-shadow(1px 1px 10px #0069ff) drop-shadow(-1px -1px 10px #0069ff);
+    filter: drop-shadow(1px 1px 10px #0069ff) drop-shadow(-1px -1px 10px #0069ff);
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(1px 1px 10px red) drop-shadow(-1px -1px 10px red);
+    filter: drop-shadow(1px 1px 10px red) drop-shadow(-1px -1px 10px red);
+  }
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    background: black
+  }
+  20% {
+    background: red
+  }
+  40% {
+    background: blue
+  }
+  60% {
+    background: orange
+  }
+  80% {
+    background: green
+  }
+  100% {
+    background: black
+  }
+}
+
+@-moz-keyframes pulsate {
+  0% {
+    background: black
+  }
+  20% {
+    background: red
+  }
+  40% {
+    background: blue
+  }
+  60% {
+    background: orange
+  }
+  80% {
+    background: green
+  }
+  100% {
+    background: black
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    background: black
+  }
+  20% {
+    background: red
+  }
+  40% {
+    background: blue
+  }
+  60% {
+    background: orange
+  }
+  80% {
+    background: green
+  }
+  100% {
+    background: black
+  }
+}
+
+/*
+
+
+
+*/
+
+#frameContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+#sk-holder #sk-messenger-button {
+  right: 40px !important;
+}
+
+#sk-container #sk-wrapper .sk-logo {
+  display: none;
+}
+
+#sk-container #sk-wrapper .sk-intro-section {
+  display: none;
+}

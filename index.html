@@ -1,0 +1,33 @@
+<html xmlns="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<script>
+    (function onBodyReady() {
+        if (document.body) {
+            var url = document.location.hash;
+            var frame = document.createElement("iframe");
+            frame.id = "frameContainer";
+            frame.src = url.substr(1, url.length);
+            document.body.appendChild(frame);
+
+
+
+            frame.addEventListener("load", function(){
+                runAnimation1();
+            })
+
+        } else {
+            setTimeout(function () {
+                onBodyReady();
+            }, 200);
+        }
+    })();
+</script>
+<body>
+
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
