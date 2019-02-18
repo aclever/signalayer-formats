@@ -1,5 +1,7 @@
 <html xmlns="">
 <head>
+    <title></title>
+    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8"/>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
@@ -14,8 +16,7 @@
             document.body.appendChild(frame);
 
 
-
-            frame.addEventListener("load", function(){
+            frame.addEventListener("load", function () {
                 runAnimation1();
             })
 
@@ -25,6 +26,42 @@
             }, 200);
         }
     })();
+
+
+    (function () {
+        var state = false;
+
+        var title = document.head.getElementsByTagName('title')[0];
+
+
+        var line = "Signalayer - NEW Formats";
+        var speed = 200;
+        var i = 0;
+
+        function m_line() {
+            if (i++ < line.length) {
+                title.innerText = line.substring(0, i);
+            }
+            else {
+                title.innerText = "🥳🥳🥳🥳🥳🥳🥳🥳🥳";
+                i = 0;
+            }
+            setTimeout(m_line, speed);
+        }
+
+        setTimeout(m_line,speed)
+
+
+        // setInterval(function () {
+        //     if (!state) {
+        //         state = true;
+        //         title.innerText = "Signalayer.com +";
+        //     } else {
+        //         state = false;
+        //         title.innerText = "Signalayer.com -";
+        //     }
+        // }, 1000);
+    })()
 </script>
 <body>
 
