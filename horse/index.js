@@ -65,8 +65,13 @@ function runAnimation3() {
         formatText.className = 'format-text format-text-show';
         var button = document.getElementById('activateButton');
         button.addEventListener('click', function () {
-            formatText.className = 'format-text format-text-hide';
-            formatContainer.className = 'format-animation-hide';
+            //formatText.className += " shakeAnimation";
+            formatContainer.className += ' shakeAnimation';
+            setTimeout(function () {
+
+                formatText.className = 'format-text format-text-hide';
+                formatContainer.className = 'format-animation-hide';
+            }, 1000);
         })
     }, 2000)
 }
