@@ -12,21 +12,21 @@ formatIMG.id = 'formatIMG';
 formatIMG.src = "ahorse.png";
 formatText.innerHTML = '<section class="container">\n' +
     '  <h1 class="title">\n' +
-    '    <span>Hi, nice</span>\n' +
-    '    <span>to see</span>\n' +
-    '    <span>you here</span>\n' +
+    '    <span>TAKE SOME</span>\n' +
+    '    <span>EXTRA</span>\n' +
+    '    <span>MONEY NOW</span>\n' +
     '  </h1>\n' +
 
-    '<button>$100 NOW</button>'
-    // '  \n' +
-    // '  <h2 class="title">\n' +
-    // '    <span>This is</span>\n' +
-    // '    <span>a long</span>\n' +
-    // '    <span>sub title</span>\n' +
-    // '    \n' +
-    // '    \n' +
-    // '  </h2>\n' +
-    '</section>';
+    '<button id="activateButton">TAKE $100</button>'
+// '  \n' +
+// '  <h2 class="title">\n' +
+// '    <span>This is</span>\n' +
+// '    <span>a long</span>\n' +
+// '    <span>sub title</span>\n' +
+// '    \n' +
+// '    \n' +
+// '  </h2>\n' +
+'</section>';
 
 
 formatContainer.appendChild(formatIMG);
@@ -63,5 +63,10 @@ function runAnimation3() {
 
     setTimeout(function () {
         formatText.className = 'format-text format-text-show';
+        var button = document.getElementById('activateButton');
+        button.addEventListener('click', function () {
+            formatText.className = 'format-text format-text-hide';
+            formatContainer.className = 'format-animation-hide';
+        })
     }, 2000)
 }

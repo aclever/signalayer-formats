@@ -43,6 +43,14 @@ body {
   animation-timing-function: ease;
 }
 
+.format-text.format-text-hide {
+  display: block;
+  animation-name: animateTextHide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
 #formatContainer img {
   height: 100%;
   -webkit-animation: animateGlow 0.8s linear infinite;
@@ -64,6 +72,15 @@ body {
   right: -150px;
   animation-name: animateHorse3;
   animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.format-animation-hide {
+  display: block;
+  right: 0;
+  animation-name: animateHorseHide;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -105,15 +122,32 @@ body {
 
 }
 
-@keyframes animateGlow {
+@keyframes animateHorseHide {
   0% {
-    -webkit-filter: drop-shadow(2px 2px 1px #fff) drop-shadow(-2px -2px 1px #fff);
-    filter: drop-shadow(2px 2px 2px #fff) drop-shadow(-2px -2px 1px #fff);
+    right: 0px;
+    bottom: 0px;
+  }
+
+  45% {
+    right: -150px;
+    bottom: 0px;
   }
 
   100% {
-    -webkit-filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px red);
-    filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px red);
+    right: -150px;
+    bottom: 0px;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    -webkit-filter: drop-shadow(2px 2px 1px #e1da13) drop-shadow(-2px -2px 1px #e1da13);
+    filter: drop-shadow(2px 2px 2px #e1da13) drop-shadow(-2px -2px 1px #e1da13);
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(2px 2px 1px #cf3623) drop-shadow(-2px -2px 1px #cf3623);
+    filter: drop-shadow(2px 2px 1px #cf3623) drop-shadow(-2px -2px 1px #cf3623);
   }
 }
 
@@ -278,8 +312,20 @@ body {
   }
 }
 
-html, body {
-  height: 100%;
+@keyframes animateTextHide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
 }
 
 .container {
@@ -289,6 +335,11 @@ html, body {
 }
 
 .container button {
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   padding: 10px 25px;
   text-transform: uppercase;
   text-align: center;
