@@ -18,31 +18,61 @@ body {
 }
 
 .format-text {
+  text-align: center;
   position: absolute;
-  left: -160px;
+  left: -230px;
   top: 10px;
   text-transform: uppercase;
-  width: 140px;
+  width: 305px;
   font-family: Arial, sans-serif;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: bold;
-  background: red;
+  background: #983f00;
   color: wheat;
   display: none;
+  border-radius: 4px;
+  padding: 20px;
+  z-index: -1;
+}
+
+.format-text.format-text-show {
+  display: block;
+  animation-name: animateTextShow;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 
 #formatContainer img {
   height: 100%;
-  -webkit-animation: animateGlow 0.1s linear infinite;
-  -moz-animation: animateGlow 0.1s linear infinite;
-  animation: animateGlow 0.1s linear infinite;
+  -webkit-animation: animateGlow 0.8s linear infinite;
+  -moz-animation: animateGlow 0.8s linear infinite;
+  animation: animateGlow 0.8s linear infinite;
 }
 
 .format-animation-show {
   display: block;
   right: -150px;
   animation-name: animateHorse1;
-  animation-duration: 4s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.format-animation-show-3 {
+  display: block;
+  right: -150px;
+  animation-name: animateHorse3;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.format-animation-show-2 {
+  display: block;
+  left: -150px;
+  animation-name: animateHorse2;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
@@ -59,12 +89,12 @@ body {
   }
 
   50% {
-    right: 0;
+    right: -80px;
     bottom: 0px;
   }
 
   70% {
-    right: 0;
+    right: -80px;
     bottom: 0px;
   }
 
@@ -77,13 +107,13 @@ body {
 
 @keyframes animateGlow {
   0% {
-    -webkit-filter: drop-shadow(1px 1px 10px #0069ff) drop-shadow(-1px -1px 10px #0069ff);
-    filter: drop-shadow(1px 1px 10px #0069ff) drop-shadow(-1px -1px 10px #0069ff);
+    -webkit-filter: drop-shadow(2px 2px 1px #fff) drop-shadow(-2px -2px 1px #fff);
+    filter: drop-shadow(2px 2px 2px #fff) drop-shadow(-2px -2px 1px #fff);
   }
 
   100% {
-    -webkit-filter: drop-shadow(1px 1px 10px red) drop-shadow(-1px -1px 10px red);
-    filter: drop-shadow(1px 1px 10px red) drop-shadow(-1px -1px 10px red);
+    -webkit-filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px red);
+    filter: drop-shadow(2px 2px 1px red) drop-shadow(-2px -2px 1px red);
   }
 }
 
@@ -180,4 +210,174 @@ body {
 
 #sk-container #sk-wrapper .sk-intro-section {
   display: none;
+}
+
+@keyframes animateHorse2 {
+  0% {
+    right: auto;
+    left: -150px;
+    bottom: 0px;
+  }
+
+  15% {
+    right: auto;
+    left: -150px;
+    bottom: 0;
+  }
+
+  50% {
+    right: auto;
+    left: -80px;
+    bottom: 0px;
+  }
+
+  70% {
+    right: auto;
+    left: -80px;
+    bottom: 0px;
+  }
+
+  100% {
+    right: auto;
+    left: -150px;
+    bottom: 0px;
+  }
+
+}
+
+@keyframes animateHorse3 {
+  0% {
+    right: -150px;
+    bottom: 0px;
+  }
+
+  15% {
+    right: -150px;
+    bottom: 0px;
+  }
+
+  100% {
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+@keyframes animateTextShow {
+
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 200px;
+  height: 140px;
+  position: relative;
+}
+
+.container button {
+  padding: 10px 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #983f00;
+  background-color: #ffe221;
+  font-size: 16px;
+  border: none;
+  margin-top: 10px;
+}
+
+h1, h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+span {
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+
+}
+
+h1 span {
+  animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+h1 span:first-child {
+  animation-delay: 0.7s;
+
+}
+
+h1 span:last-child {
+  color: #ffe221;
+  animation-delay: 0.5s;
+}
+
+h2 {
+  top: 0;
+  position: absolute;
+}
+
+span {
+  animation-delay: 4.1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+span:first-child {
+  animation-delay: 4.2s;
+
+}
+
+span:last-child {
+  color: #ffe221;
+  animation-delay: 4s;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+
+  /*80% {*/
+  /*transform: translateY(0);*/
+  /*opacity: 1;*/
+  /*-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+  /*clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
+  /*}*/
+  /*100% {*/
+  /*transform: translateY(50px);*/
+  /*opacity: 0;*/
+  /*-webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*/
+  /*clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*/
+
+  /*}*/
 }
