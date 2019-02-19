@@ -21,5 +21,6 @@ document.body.appendChild(formatContainer);
 
 
 function runAnimation1(){
+    console.log('animation');
     formatContainer.className = 'format-animation-show';
 }
