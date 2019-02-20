@@ -80,7 +80,7 @@ html {
   }
 
   100% {
-    transform: translate(-12px, -19px);
+    transform: translate(0px, -19px);
     opacity: 0;
   }
 }

@@ -23,4 +23,11 @@ button.addEventListener('click', function () {
     Array.prototype.forEach.call(nextElem, function (ch) {
         ch.className = ch.className.replace(classType, 'chain-hide');
     })
+
+
+    setTimeout(function () {
+        var el = document.getElementsByClassName('wrapper')[0];
+
+        el.remove();
+    }, 300);
 });
