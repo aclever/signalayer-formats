@@ -12,12 +12,12 @@ formatIMG.id = 'formatIMG';
 formatIMG.src = "ahorse.png";
 formatText.innerHTML = '<section class="container">\n' +
     '  <h1 class="title">\n' +
-    '    <span>TAKE SOME</span>\n' +
-    '    <span>EXTRA</span>\n' +
-    '    <span>MONEY NOW</span>\n' +
+    '    <span>DOUBLE YOUR</span>\n' +
+    '    <span>DEPOSIT</span>\n' +
+    '    <span>UP TO $100</span>\n' +
     '  </h1>\n' +
 
-    '<button id="activateButton">TAKE $100</button>'
+    '<button id="activateButton">JOIN NOW</button>'
 // '  \n' +
 // '  <h2 class="title">\n' +
 // '    <span>This is</span>\n' +
