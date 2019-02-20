@@ -115,6 +115,16 @@ body {
 }
 
 
+
+#onSetupButton {
+
+}
+
+.glowing {
+  box-shadow: 1px 1px 1px #0025ff;
+}
+
+
 @media (max-width: 400px) {
 
   .img-container {
