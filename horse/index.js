@@ -65,6 +65,7 @@ function runAnimation3() {
         formatText.className = 'format-text format-text-show';
         var button = document.getElementById('activateButton');
         button.addEventListener('click', function () {
+            analytics.track("Clicked op Horse");
             //formatText.className += " shakeAnimation";
             formatContainer.className += ' shakeAnimation';
             setTimeout(function () {

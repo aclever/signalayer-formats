@@ -10,7 +10,7 @@ imgContainer.className = 'img-container';
 setTimeout(function () {
     imgContainer.innerHTML = '<h3>Try Signalayer free for 14 days</h3>' +
         '<p>Start creating online marketing campaigns for your business with Signalayer’s 14-day free trial. No commitment.</p>'
-        + '<button>Please NOW</button>';
+        + '<button id="activeButton">Please NOW</button>';
 }, 2400);
 
 var placeForBanner = document.getElementById('placeForBanner');
@@ -24,6 +24,12 @@ function runApp() {
 
 
 var onSetupButton = document.getElementById('onSetupButton');
+
+var activeButton = document.getElementById('activeButton');
+
+activeButton.addEventListener('click', function () {
+    analytics.track("click on embed button");
+})
 
 // onSetupButton.addEventListener('click', function () {
 //     document.getElementsByClassName('')

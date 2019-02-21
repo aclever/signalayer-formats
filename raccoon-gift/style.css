@@ -11,7 +11,7 @@
 
 #confetti-canvas {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
 }
 
@@ -27,19 +27,27 @@ img.above {
   z-index: 9;
 }
 
-.raccoon-container.hidden {
-  display: none;
+.raccoon-container.hide-out {
+  animation: showRaccoonOut 1s forwards;
 }
 
-
-
-@keyframes showRaccoonIn{
-  0 % {
+@keyframes showRaccoonIn {
+  0% {
     opacity: 0;
   }
 
-
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes showRaccoonOut {
+  0% {
+    opacity: 1;
+    right: 0;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

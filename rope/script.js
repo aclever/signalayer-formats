@@ -27,6 +27,7 @@ function listenBadgeClick() {
 
 
 function badgeClick() {
+    analytics.track("Clicked op Rope");
     clearTimeout(intervalTimeout);
     addCollapseStyle();
     startConfetti();     //starts the confetti animation
