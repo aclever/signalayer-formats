@@ -1,4 +1,5 @@
 var ropeMain = document.getElementById('ropeMain');
+var soundTaDa = new Audio('TaDasound.mp3');
 
 function addIntervalStyle() {
     ropeMain.className = 'chandelier-holder show-interval-animation';
@@ -29,8 +30,10 @@ function badgeClick() {
     addCollapseStyle();
     startConfetti();     //starts the confetti animation
 
+
     setTimeout(function () {
         Signalayer.API.show("5b79109b26df76000fcd226a");
+        soundTaDa.play();
     }, 200);
 
     setTimeout(function(){
