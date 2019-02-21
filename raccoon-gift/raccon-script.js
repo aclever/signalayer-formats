@@ -22,6 +22,7 @@ rac1.addEventListener('click', function () {
     if (step === 1) {
 
         setTimeout(function () {
+            rac1.remove();
             racContainer.appendChild(rac2);
             blocked = false;
             step = 2;
@@ -29,20 +30,12 @@ rac1.addEventListener('click', function () {
 
         rac1.src = 'animation-1-2_no-bg.gif';
     }
-
-    if (step === 2) {
-        step = 3;
-        blocked = false;
-        rac2.src = 'animation_1-4_no-bg.gif';
-    }
-})
+});
 
 
 rac2.addEventListener('click', function () {
     rac2.src = 'animation-1-4_no-bg.gif';
     startConfetti();     //starts the confetti animation
-
-
 
 
     setTimeout(function(){
