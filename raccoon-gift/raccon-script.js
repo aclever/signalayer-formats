@@ -1,10 +1,10 @@
 var racContainer = document.createElement('div');
 racContainer.className = 'raccoon-container';
 var rac1 = document.createElement('img');
-rac1.src = 'animation-sketch_1.gif';
+rac1.src = 'animation-1-1_no-bg.gif';
 
 var rac2 = document.createElement('img');
-rac2.src = 'animation-sketch_1-3.gif';
+rac2.src = 'animation-1-3_no-bg.gif';
 rac2.className = 'above';
 
 racContainer.appendChild(rac1);
@@ -27,19 +27,19 @@ rac1.addEventListener('click', function () {
             step = 2;
         }, 700);
 
-        rac1.src = 'animation-sketch_1-2.gif';
+        rac1.src = 'animation-1-2_no-bg.gif';
     }
 
     if (step === 2) {
         step = 3;
         blocked = false;
-        rac2.src = 'animation-sketch_1-4.gif';
+        rac2.src = 'animation_1-4_no-bg.gif';
     }
 })
 
 
 rac2.addEventListener('click', function () {
-    rac2.src = 'animation-sketch_1-4.gif';
+    rac2.src = 'animation-1-4_no-bg.gif';
     startConfetti();     //starts the confetti animation
 
 
@@ -53,4 +53,4 @@ rac2.addEventListener('click', function () {
     setTimeout(function(){
         stopConfetti();
     }, 2000);
-})
+});

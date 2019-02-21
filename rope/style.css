@@ -36,8 +36,8 @@ body {
   left: 0;
   top: 12px;
   height: 13px;
-  width: 6px;
-  background: url(HiddenDinner-Logo-SVGForWeb_Chain.svg);
+  width: 2px;
+  background-color: #7dacb1;
   transform-origin: top center;
   animation: fall-n-swing 2.5s 1;
   animation-timing-function: ease-in-out;
@@ -53,8 +53,8 @@ body {
   left: 0;
   top: 12px;
   height: 13px;
-  width: 6px;
-  background: url(HiddenDinner-Logo-SVGForWeb_Chain.svg);
+  width: 2px;
+  background-color: #7dacb1;
   transform-origin: top center;
   animation: interval-n-swing 2.5s linear infinite;
   animation-timing-function: ease-in-out;
@@ -62,16 +62,16 @@ body {
 
 .show-interval-animation .badge {
   top: 9px;
-  left: -15px;
-  width: 35px;
+  left: -16px;
+  width: 34px;
   height: 100px;
   background: none;
 }
 
 .badge {
   top: 9px;
-  left: -15px;
-  width: 35px;
+  left: -16px;
+  width: 34px;
   height: 100px;
   background: none;
   cursor: pointer !important;
@@ -91,8 +91,8 @@ body {
   left: 0;
   top: 12px;
   height: 13px;
-  width: 6px;
-  background: url(HiddenDinner-Logo-SVGForWeb_Chain.svg);
+  width: 2px;
+  background-color: #7dacb1;
   transform-origin: top center;
   animation: hideAnimation 0.5s 1 forwards;
   animation-timing-function: ease-in-out;
@@ -100,8 +100,8 @@ body {
 
 .show-collapse-animation .badge {
   top: 9px;
-  left: -15px;
-  width: 35px;
+  left: -16px;
+  width: 34px;
   height: 100px;
   background: none;
 }
