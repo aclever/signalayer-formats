@@ -16,9 +16,6 @@ var step = 1;
 var blocked = false;
 
 rac1.addEventListener('click', function () {
-
-    console.log('state');
-    console.log(step);
     if (blocked) return false;
     blocked = true;
 
@@ -34,7 +31,6 @@ rac1.addEventListener('click', function () {
     }
 
     if (step === 2) {
-        console.log('exec 3');
         step = 3;
         blocked = false;
         rac2.src = 'animation-sketch_1-4.gif';
