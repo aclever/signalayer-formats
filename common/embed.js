@@ -20,9 +20,10 @@ buildStyles();
 
         frame.addEventListener("load", function () {
             if (window.runApp) {
+                console.log(runApp);
                 window.runApp();
             }
-        })
+        });
 
         appendTracker();
 
