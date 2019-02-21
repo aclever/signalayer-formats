@@ -1,0 +1,23 @@
+.raccoon-container {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.raccoon-container img {
+  height: 100%;
+  cursor: pointer;
+}
+
+img.above {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.raccoon-container.hidden {
+  display: none;
+}
