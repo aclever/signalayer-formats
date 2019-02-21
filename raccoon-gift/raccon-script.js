@@ -42,11 +42,12 @@ rac2.addEventListener('click', function () {
     rac2.src = 'animation-sketch_1-4.gif';
     startConfetti();     //starts the confetti animation
 
-    Signalayer.API.show("5b79109b26df76000fcd226a");
+
 
 
     setTimeout(function(){
         racContainer.className = 'raccoon-container hidden';
+        Signalayer.API.show("5b79109b26df76000fcd226a");
     }, 800);
 
     setTimeout(function(){
