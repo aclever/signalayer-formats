@@ -1,3 +1,4 @@
+
 var activeClass = 'chain';
 
 var tm1 = setTimeout(function () {
@@ -15,6 +16,9 @@ var button = document.getElementById('activePull');
 button.addEventListener('click', function () {
     clearTimeout(tm1);
 
+    console.log('drop');
+    showConfetti();
+
     var classType = activeClass;
 
 
@@ -22,11 +26,10 @@ button.addEventListener('click', function () {
 
     Array.prototype.forEach.call(nextElem, function (ch) {
         ch.className = ch.className.replace(classType, 'chain-hide');
-    })
-
+    });
 
     setTimeout(function () {
-        var el = document.getElementsByClassName('wrapper')[0];
+        var el = document.getElementsByClassName('chandelier-holder')[0];
 
         el.remove();
     }, 300);
