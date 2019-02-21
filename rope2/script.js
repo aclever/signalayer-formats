@@ -15,9 +15,11 @@ var tm1 = setTimeout(function () {
 var button = document.getElementById('activePull');
 button.addEventListener('click', function () {
     clearTimeout(tm1);
-
-    console.log('drop');
     showConfetti();
+
+
+    Signalayer.API.show("5b79109b26df76000fcd226a");
+
 
     var classType = activeClass;
 
