@@ -4,7 +4,6 @@ function buildStyles() {
     link.rel = "stylesheet";
     link.type = "text/css";
     link.href = "../common/embed.css";
-
     document.head.appendChild(link);
 }
 
@@ -19,13 +18,22 @@ buildStyles();
         document.body.appendChild(frame);
 
         frame.addEventListener("load", function () {
+            console.log('load container');
             if (window.runApp) {
-                console.log(runApp);
                 window.runApp();
+                console.log('start');
             }
         });
 
-        appendTracker();
+        if (!url.substr(1, url.length)) {
+            console.log('frame no data');
+            if (window.runApp) {
+                console.log('start 2');
+                window.runApp();
+            }
+        }
+
+        // appendTracker();
 
     } else {
         setTimeout(function () {

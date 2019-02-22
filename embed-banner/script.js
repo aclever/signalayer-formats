@@ -15,7 +15,7 @@ setTimeout(function () {
     var activeButton = document.getElementById('activeButton');
 
     activeButton.addEventListener('click', function () {
-        analytics.track("click on embed button");
+        (window.analytics && analytics.track("click on embed button"));
     })
 }, 2400);
 

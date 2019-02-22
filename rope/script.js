@@ -27,7 +27,7 @@ function listenBadgeClick() {
 
 
 function badgeClick() {
-    analytics.track("Clicked op Rope");
+    (window.analytics && window.analytics.track("Clicked op Rope"));
     clearTimeout(intervalTimeout);
     addCollapseStyle();
     startConfetti();     //starts the confetti animation
@@ -45,13 +45,13 @@ function badgeClick() {
 
 
 function runApp() {
+    console.log('run');
+    listenBadgeClick();
     setTimeout(function () {
         addStartStype();
 
         intervalTimeout = setTimeout(function () {
             addIntervalStyle();
         }, 3500);
-
-        listenBadgeClick();
     }, 3000);
 }

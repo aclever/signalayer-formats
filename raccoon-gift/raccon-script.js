@@ -40,7 +40,7 @@ function runApp() {
         rac2.src = 'animation-1-4_no-bg.gif';
         startConfetti();     //starts the confetti animation
 
-        analytics.track("Click on raccoon [Open Gift]");
+        (window.analytics && analytics.track("Click on raccoon [Open Gift]"));
 
         setTimeout(function () {
             racContainer.className = 'raccoon-container hide-out';
