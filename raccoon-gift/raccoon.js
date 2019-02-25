@@ -1,5 +1,12 @@
 function runApp() {
     var racContainer = document.createElement('div');
+    var closeIcon = document.createElement('div');
+    var closeIconImg = document.createElement('img');
+    closeIcon.className = 'close-btn';
+    closeIconImg.src = "cls.svg";
+    closeIcon.appendChild(closeIconImg);
+    racContainer.appendChild(closeIcon);
+
     racContainer.className = 'raccoon-container';
     var rac1 = document.createElement('img');
     rac1.src = 'animation-1-1_no-bg.gif';
@@ -11,9 +18,7 @@ function runApp() {
     racContainer.appendChild(rac1);
     document.body.appendChild(racContainer);
 
-
     var step = 1;
-
     var blocked = false;
 
     rac1.addEventListener('click', function () {
@@ -21,8 +26,7 @@ function runApp() {
         blocked = true;
 
         if (step === 1) {
-
-            analytics.track("Click on raccoon [Help]");
+            (window.analytics && analytics.track("[FORMATS] Click Help Raccoon [Step 1]"));
 
             setTimeout(function () {
                 rac1.remove();
@@ -38,18 +42,29 @@ function runApp() {
 
     rac2.addEventListener('click', function () {
         rac2.src = 'animation-1-4_no-bg.gif';
-        startConfetti();     //starts the confetti animation
+        startConfetti(); //starts the confetti animation
 
-        (window.analytics && analytics.track("Click on raccoon [Open Gift]"));
+        (window.analytics && analytics.track("[FORMATS] Click Open Raccoon Gift [Step 2]"));
 
         setTimeout(function () {
             racContainer.className = 'raccoon-container hide-out';
-            Signalayer.API.show("5b79109b26df76000fcd226a");
+            Signalayer.API.show(CONFIG.thankId);
         }, 200);
 
         setTimeout(function () {
             stopConfetti();
         }, 2000);
+    });
+
+
+    function hideFormat() {
+        racContainer.className = 'raccoon-container hide-out';
+    }
+
+
+    closeIcon.addEventListener('click', function (e) {
+        (window.analytics && window.analytics.track("[FORMATS] Close the Raccoon Format"));
+        hideFormat();
     });
 
 }

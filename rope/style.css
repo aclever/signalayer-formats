@@ -65,6 +65,8 @@ body {
   width: 50px;
   height: 100px;
   background: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .close-btn {
@@ -75,6 +77,8 @@ body {
   animation: opacityShow 0.5s forwards;
   animation-timing-function: ease-in-out;
   opacity: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 @keyframes opacityShow {
@@ -94,6 +98,8 @@ body {
   height: 100px;
   background: none;
   cursor: pointer !important;
+  outline: none;
+  box-shadow: none;
 }
 
 .badge img {
@@ -124,6 +130,8 @@ body {
   width: 50px;
   height: 100px;
   background: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .show-pull-down-animation .chain {
@@ -148,10 +156,14 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 .badge .close-btn img {
   opacity: 0.2;
+  outline: none;
+  box-shadow: none;
 }
 
 .badge .close-btn img:hover {
@@ -164,5 +176,7 @@ body {
   width: 50px;
   height: 100px;
   background: none;
+  outline: none;
+  box-shadow: none;
 }
 

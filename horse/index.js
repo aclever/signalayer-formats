@@ -17,7 +17,8 @@ formatText.innerHTML = '<section class="container">\n' +
     '    <span>UP TO $100</span>\n' +
     '  </h1>\n' +
 
-    '<button id="activateButton">JOIN NOW</button>'
+    '<button id="activateButton">JOIN NOW</button>' +
+    '<button id="closeButton">Close</button>'
 // '  \n' +
 // '  <h2 class="title">\n' +
 // '    <span>This is</span>\n' +
@@ -34,7 +35,7 @@ formatContainer.appendChild(formatText);
 document.body.appendChild(formatContainer);
 
 
-function runAnimation1() {
+function runApp() {
     setTimeout(function () {
         formatContainer.className = 'format-animation-show';
 
@@ -53,7 +54,7 @@ function runAnimation2() {
         formatContainer.className = 'hidden';
 
         runAnimation3();
-    }, 3000)
+    }, 2000)
 
 }
 
@@ -64,15 +65,25 @@ function runAnimation3() {
     setTimeout(function () {
         formatText.className = 'format-text format-text-show';
         var button = document.getElementById('activateButton');
-        button.addEventListener('click', function () {
-            (analytics && analytics.track("Clicked op Horse"));
-            //formatText.className += " shakeAnimation";
-            formatContainer.className += ' shakeAnimation';
-            setTimeout(function () {
+        var closeButton = document.getElementById('closeButton');
 
+        button.addEventListener('click', function () {
+            (window.analytics && analytics.track("[FORMATS] Click on horse format."));
+
+            setTimeout(function () {
                 formatText.className = 'format-text format-text-hide';
                 formatContainer.className = 'format-animation-hide';
-            }, 1000);
-        })
-    }, 2000)
+                Signalayer.API.show(CONFIG.thankId);
+            }, 200);
+        });
+
+        closeButton.addEventListener('click', function () {
+            (window.analytics && analytics.track("[FORMATS] Cancel the horse format."));
+
+            setTimeout(function () {
+                formatText.className = 'format-text format-text-hide';
+                formatContainer.className = 'format-animation-hide';
+            }, 200);
+        });
+    }, 1000)
 }

@@ -37,7 +37,9 @@ function dragEnd(e) {
 
     active = false;
 
-    badgeClick();
+    if (e.target.id === "badgeElement") {
+        badgeClick();
+    }
 }
 
 function drag(e) {

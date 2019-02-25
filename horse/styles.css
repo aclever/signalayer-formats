@@ -25,9 +25,9 @@ body {
   text-transform: uppercase;
   width: 305px;
   font-family: Arial, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  background: #983f00;
+  background: #8e0707;
   color: wheat;
   display: none;
   border-radius: 4px;
@@ -46,9 +46,9 @@ body {
 .format-text.format-text-hide {
   display: block;
   animation-name: animateTextHide;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease-out;
 }
 
 #formatContainer img {
@@ -77,7 +77,7 @@ body {
 }
 
 .shakeAnimation {
-  animation: shake 0.52s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.52s cubic-bezier(.36, .07, .19, .97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -148,84 +148,20 @@ body {
 
 @keyframes animateGlow {
   0% {
-    -webkit-filter: drop-shadow(2px 2px 1px #e1da13) drop-shadow(-2px -2px 1px #e1da13);
-    filter: drop-shadow(2px 2px 2px #e1da13) drop-shadow(-2px -2px 1px #e1da13);
+    -webkit-filter: drop-shadow(1px 2px 0px rgba(26, 7, 7, 0.76)) drop-shadow(-1px -1px 0px rgba(26, 7, 7, 0.76));
+    filter: drop-shadow(1px 1px 1px rgba(26, 7, 7, 0.76)) drop-shadow(-1px -1px 1px rgba(26, 7, 7, 0.76));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(0px 1px 0px rgba(26, 7, 7, 0.76)) drop-shadow(0px -1px 0px rgba(26, 7, 7, 0.76));
+    filter: drop-shadow(0px 1px 0px rgba(26, 7, 7, 0.76)) drop-shadow(0px -1px 0px rgba(26, 7, 7, 0.76));
   }
 
   100% {
-    -webkit-filter: drop-shadow(2px 2px 1px #cf3623) drop-shadow(-2px -2px 1px #cf3623);
-    filter: drop-shadow(2px 2px 1px #cf3623) drop-shadow(-2px -2px 1px #cf3623);
+    -webkit-filter: drop-shadow(1px 1px 0px rgba(26, 7, 7, 0.76)) drop-shadow(-1px -1px 0px rgba(26, 7, 7, 0.76));
+    filter: drop-shadow(1px 1px 0px rgba(26, 7, 7, 0.76)) drop-shadow(-1px -1px 0px rgba(26, 7, 7, 0.76));
   }
 }
-
-@-webkit-keyframes pulsate {
-  0% {
-    background: black
-  }
-  20% {
-    background: red
-  }
-  40% {
-    background: blue
-  }
-  60% {
-    background: orange
-  }
-  80% {
-    background: green
-  }
-  100% {
-    background: black
-  }
-}
-
-@-moz-keyframes pulsate {
-  0% {
-    background: black
-  }
-  20% {
-    background: red
-  }
-  40% {
-    background: blue
-  }
-  60% {
-    background: orange
-  }
-  80% {
-    background: green
-  }
-  100% {
-    background: black
-  }
-}
-
-@keyframes pulsate {
-  0% {
-    background: black
-  }
-  20% {
-    background: red
-  }
-  40% {
-    background: blue
-  }
-  60% {
-    background: orange
-  }
-  80% {
-    background: green
-  }
-  100% {
-    background: black
-  }
-}
-
-/*
-
-
-
-*/
 
 #frameContainer {
   position: absolute;
@@ -341,24 +277,8 @@ body {
   position: relative;
 }
 
-.container button {
-  box-shadow: none;
-  outline: none;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  padding: 10px 25px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #983f00;
-  background-color: #ffe221;
-  font-size: 16px;
-  border: none;
-  margin-top: 10px;
-}
-
 h1, h2 {
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -411,6 +331,34 @@ span:last-child {
   animation-delay: 4s;
 }
 
+#activateButton {
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  background-color: #2f3638;
+  font-size: 16px;
+  border: none;
+  margin-top: 10px;
+}
+
+#closeButton {
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+
 @keyframes titleAnimation {
   0% {
     transform: translateY(-50px);
@@ -424,22 +372,7 @@ span:last-child {
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
-
-  /*80% {*/
-  /*transform: translateY(0);*/
-  /*opacity: 1;*/
-  /*-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
-  /*clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);*/
-  /*}*/
-  /*100% {*/
-  /*transform: translateY(50px);*/
-  /*opacity: 0;*/
-  /*-webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*/
-  /*clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);*/
-
-  /*}*/
 }
-
 
 @keyframes shake {
   10%, 90% {

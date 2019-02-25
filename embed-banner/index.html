@@ -3,19 +3,12 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8"/>
-    <!--<script type="text/javascript" src="../common/embed.js"></script>-->
     <link rel="stylesheet" type="text/css" href="styles.css"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106591908-4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-106591908-4');
-    </script>
-
-
+    <script src="../common/segment.js"></script>
+    <script src="../common/player.js"></script>
+    <script src="../common/confetti.js"></script>
+    <script src="../common/embed.js"></script>
 </head>
 <body>
 
@@ -62,15 +55,6 @@
         with our content in order to engage user when it’s most relevant.</p>
 
 </section>
-<section class="section4"></section>
-
 </body>
 <script type="text/javascript" src="script.js"></script>
-
-<script>
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-        analytics.load("ccZ8HhIvG1ezDjFJMcBwCIojxeysW3MS");
-        analytics.page();
-    }}();
-</script>
 </html>

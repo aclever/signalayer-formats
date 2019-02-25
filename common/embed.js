@@ -18,7 +18,6 @@ buildStyles();
         document.body.appendChild(frame);
 
         frame.addEventListener("load", function () {
-
             if (window.runApp) {
                 window.runApp();
 
@@ -26,14 +25,10 @@ buildStyles();
         });
 
         if (!url.substr(1, url.length)) {
-
             if (window.runApp) {
-
                 window.runApp();
             }
         }
-
-        // appendTracker();
 
     } else {
         setTimeout(function () {
@@ -41,11 +36,3 @@ buildStyles();
         }, 200);
     }
 })();
-
-
-function appendTracker() {
-    var script = document.createElement('script');
-    script.src = '../comon/user.js';
-    script.type = 'text/javascript;';
-    document.body.appendChild(script);
-}
