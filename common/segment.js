@@ -54,5 +54,6 @@ gtag('config', 'UA-106591908-4');
         analytics.SNIPPET_VERSION = "4.1.0";
         analytics.load("ccZ8HhIvG1ezDjFJMcBwCIojxeysW3MS");
         analytics.page();
+        analytics.identify();
     }
 }();
