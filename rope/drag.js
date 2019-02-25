@@ -36,6 +36,8 @@ function dragEnd(e) {
     initialY = currentY;
 
     active = false;
+
+    badgeClick();
 }
 
 function drag(e) {
