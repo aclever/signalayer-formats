@@ -18,17 +18,17 @@ buildStyles();
         document.body.appendChild(frame);
 
         frame.addEventListener("load", function () {
-            console.log('load container');
+
             if (window.runApp) {
                 window.runApp();
-                console.log('start');
+
             }
         });
 
         if (!url.substr(1, url.length)) {
-            console.log('frame no data');
+
             if (window.runApp) {
-                console.log('start 2');
+
                 window.runApp();
             }
         }

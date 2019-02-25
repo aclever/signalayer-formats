@@ -10,10 +10,9 @@ body {
   display: none;
 }
 
-
 #confetti-canvas {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
 }
 
@@ -25,7 +24,7 @@ body {
   position: relative;
   height: 500px;
   padding: 0 .5em;
-  margin-top: -20px;
+  margin-top: -190px;
   width: 400px;
   float: right;
 }
@@ -34,8 +33,8 @@ body {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 12px;
-  height: 13px;
+  top: 17px;
+  height: 20px;
   width: 2px;
   background-color: #7dacb1;
   transform-origin: top center;
@@ -51,8 +50,8 @@ body {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 12px;
-  height: 13px;
+  top: 17px;
+  height: 20px;
   width: 2px;
   background-color: #7dacb1;
   transform-origin: top center;
@@ -62,16 +61,36 @@ body {
 
 .show-interval-animation .badge {
   top: 9px;
-  left: -16px;
-  width: 34px;
+  left: -24px;
+  width: 50px;
   height: 100px;
   background: none;
 }
 
+.close-btn {
+  opacity: 0;
+}
+
+.show-interval-animation .close-btn {
+  animation: opacityShow 0.5s forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .badge {
   top: 9px;
-  left: -16px;
-  width: 34px;
+  left: -24px;
+  width: 50px;
   height: 100px;
   background: none;
   cursor: pointer !important;
@@ -81,16 +100,17 @@ body {
   width: 100% !important;
 }
 
-.badge img:hover {
-  opacity: 0.9;
+#badgeElement:hover {
+  -webkit-filter: drop-shadow(-1px 1px 1px rgba(183, 152, 116, 0.51)) drop-shadow(0px 1px 1px rgba(183, 152, 116, 0.51));
+  filter: drop-shadow(-1px 1px 1px rgba(183, 152, 116, 0.51)) drop-shadow(1px 1px 1px rgba(183, 152, 116, 0.51));
 }
 
 .show-collapse-animation .chain {
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 12px;
-  height: 13px;
+  top: 17px;
+  height: 20px;
   width: 2px;
   background-color: #7dacb1;
   transform-origin: top center;
@@ -100,8 +120,49 @@ body {
 
 .show-collapse-animation .badge {
   top: 9px;
-  left: -16px;
-  width: 34px;
+  left: -24px;
+  width: 50px;
   height: 100px;
   background: none;
 }
+
+.show-pull-down-animation .chain {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 17px;
+  height: 20px;
+  width: 2px;
+  background-color: #7dacb1;
+  transform-origin: top center;
+  animation: pullDownAnimation 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.badge .close-btn {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.badge .close-btn img {
+  opacity: 0.2;
+}
+
+.badge .close-btn img:hover {
+  opacity: 1;
+}
+
+.show-pull-down-animation .badge {
+  top: 9px;
+  left: -24px;
+  width: 50px;
+  height: 100px;
+  background: none;
+}
+
