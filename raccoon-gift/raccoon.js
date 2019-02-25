@@ -33,7 +33,7 @@ function runApp() {
                 racContainer.appendChild(rac2);
                 blocked = false;
                 step = 2;
-            }, 700);
+            }, 800);
 
             rac1.src = 'animation-1-2_no-bg.gif';
         }
