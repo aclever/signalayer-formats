@@ -1,4 +1,5 @@
 function runApp() {
+    (window.analytics && analytics.track("[FORMATS] Start Raccoon Gift format."));
     var racContainer = document.createElement('div');
     var closeIcon = document.createElement('div');
     var closeIconImg = document.createElement('img');

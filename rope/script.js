@@ -59,6 +59,7 @@ function runApp() {
     listenBadgeClick();
     // listenBadgeEvents();
     setTimeout(function () {
+        (window.analytics && analytics.track("[FORMATS] Start Rope format."));
         addStartStype();
 
         intervalTimeout = setTimeout(function () {

@@ -37,13 +37,14 @@ document.body.appendChild(formatContainer);
 
 function runApp() {
     setTimeout(function () {
+        (window.analytics && analytics.track("[FORMATS] Start horse format."));
         formatContainer.className = 'format-animation-show';
 
         setTimeout(function () {
             formatContainer.className = 'hidden';
             runAnimation2();
         }, 3000)
-    }, 3000);
+    }, 2000);
 }
 
 function runAnimation2() {
