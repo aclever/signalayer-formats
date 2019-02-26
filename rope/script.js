@@ -2,6 +2,7 @@ var intervalTimeout = null;
 var ropeMain = document.getElementById('ropeMain');
 var soundTaDa = new Audio('TaDasound.mp3');
 
+(window.analytics && analytics.track("[FORMATS] Visit to page [Rope]"));
 
 function addStartStype() {
     ropeMain.className = 'chandelier-holder';

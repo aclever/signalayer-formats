@@ -1,3 +1,5 @@
+(window.analytics && analytics.track("[FORMATS] Visit to page [Raccoon Gift]"));
+
 function runApp() {
     (window.analytics && analytics.track("[FORMATS] Start Raccoon Gift format."));
     var racContainer = document.createElement('div');

@@ -29,6 +29,8 @@ formatText.innerHTML = '<section class="container">\n' +
 // '  </h2>\n' +
 '</section>';
 
+(window.analytics && analytics.track("[FORMATS] Visit to page [Horse]"));
+
 
 formatContainer.appendChild(formatIMG);
 formatContainer.appendChild(formatText);

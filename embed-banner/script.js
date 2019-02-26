@@ -6,6 +6,7 @@ var imgContainer = document.createElement('div');
 
 imgContainer.className = 'img-container';
 
+(window.analytics && analytics.track("[FORMATS] Visit to page [Embed banner]"));
 
 setTimeout(function () {
     imgContainer.innerHTML = '<h3>Try Signalayer free for 14 days</h3>' +
