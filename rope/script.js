@@ -22,9 +22,9 @@ function listenBadgeClick() {
     var badge = document.getElementById('badgeElement');
 
     badge.addEventListener('click', function () {
-        badgeClick();
-
         (window.analytics && window.analytics.track("[FORMATS] Click on Rope Format"));
+        console.log('click');
+        badgeClick();
     });
 
     var closeBtn = document.getElementById('closeBtn');
