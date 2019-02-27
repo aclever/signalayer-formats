@@ -47,7 +47,11 @@ function badgeClick() {
 
     setTimeout(function () {
         Signalayer.API.show(CONFIG.thankId);
-        soundTaDa.play();
+        try {
+            soundTaDa.play();
+        } catch (e) {
+
+        }
     }, 200);
 
     setTimeout(function () {
